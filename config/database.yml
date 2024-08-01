@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
+  url: "postgresql://dummy_data_db_production_user:gRNpUhZtD1BwjqnRhGwqOWqleSid57Np@dpg-cqltb852ng1s73e8kq20-a/dummy_data_db_production"
   database: dummy_data_db_production
-  username: dummy_data_db
+  username: <%= ENV["DUMMY_DATA_DB_DATABASE_USER"] %>
   password: <%= ENV["DUMMY_DATA_DB_DATABASE_PASSWORD"] %>
